@@ -79,10 +79,10 @@ namespace Lab3
                             Console.WriteLine("  2. Descending");
                             yeah = int.Parse(Console.ReadLine());
                             if (yeah == 1)
-                                for (int j=0; j< arli.Count - 2; j++)
-                                    for (int i=0; i<arli.Count-2-j;i++)
+                                for (int j=0; j< arli.Count - 1; j++)
+                                    for (int i=0; i<arli.Count-1-j;i++)
                                     {
-                                        if (((Geometric_figures)arli[i]).CompareTo(arli[i+1])==0)
+                                        if (((Geometric_figures)arli[i]).CompareTo(arli[i+1])==1)
                                         {
                                             Object spec = arli[i];
                                             arli[i] = arli[i + 1];
@@ -90,10 +90,10 @@ namespace Lab3
                                         }
                                     }
                             else
-                                for (int j = 0; j < arli.Count - 2; j++)
-                                    for (int i = 0; i < arli.Count - 2 - j; i++)
+                                for (int j = 0; j < arli.Count - 1; j++)
+                                    for (int i = 0; i < arli.Count - 1 - j; i++)
                                     {
-                                        if (((Geometric_figures)arli[i]).CompareTo(arli[i + 1]) == 1)
+                                        if (((Geometric_figures)arli[i]).CompareTo(arli[i + 1]) == 0)
                                         {
                                             Object spec = arli[i];
                                             arli[i] = arli[i + 1];
@@ -136,8 +136,8 @@ namespace Lab3
                             Console.WriteLine("  2. Descending");
                             yeah = int.Parse(Console.ReadLine());
                             if (yeah == 1)
-                                for (int j = 0; j < li.Count - 2; j++)
-                                    for (int i = 0; i < li.Count - 2 - j; i++)
+                                for (int j = 0; j < li.Count - 1; j++)
+                                    for (int i = 0; i < li.Count - 1 - j; i++)
                                     {
                                         if (((Geometric_figures)li[i]).CompareTo(li[i + 1]) == 0)
                                         {
@@ -147,8 +147,8 @@ namespace Lab3
                                         }
                                     }
                             else
-                                for (int j = 0; j < li.Count - 2; j++)
-                                    for (int i = 0; i < li.Count - 2 - j; i++)
+                                for (int j = 0; j < li.Count - 1; j++)
+                                    for (int i = 0; i < li.Count - 1 - j; i++)
                                     {
                                         if (((Geometric_figures)li[i]).CompareTo(li[i + 1]) == 1)
                                         {
