@@ -17,9 +17,6 @@ using System.Diagnostics;
 
 namespace Lab4
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         List< String> list = new List<String>();
@@ -60,15 +57,15 @@ namespace Lab4
 
         private void Search_button_Click(object sender, RoutedEventArgs e)
         {
-            //Слово для поиска
+
             string word = this.Inputwords.Text.Trim();
 
-            //Если слово для поиска не пусто
+
             if (!string.IsNullOrWhiteSpace(word) && list.Count > 0 && word != "Input word you'd like to find")
             {
-                //Слово для поиска в верхнем регистре
+
                 string wordUpper = word.ToUpper();
-                //Временные результаты поиска
+
                 List<string> tempList = new List<string>();
                 Stopwatch t = new Stopwatch();
                 t.Start();
