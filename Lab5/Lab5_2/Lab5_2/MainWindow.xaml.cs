@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.Diagnostics;
-using Lab5_1;
+using ClassLibraryLab5;
 
 namespace Lab5_2
 {
@@ -32,7 +32,10 @@ namespace Lab5_2
 
         private void Read_File_Button_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog Dialog_one = new OpenFileDialog();            Dialog_one.Filter = "text_files|*.txt";            if (Dialog_one.ShowDialog()== true)
+            OpenFileDialog Dialog_one = new OpenFileDialog();
+            Dialog_one.Filter = "text_files|*.txt";
+
+            if (Dialog_one.ShowDialog()== true)
             {
                 Stopwatch mytimer = new Stopwatch();
                 mytimer.Start();
@@ -72,9 +75,12 @@ namespace Lab5_2
                 List<string> tempList = new List<string>();
                 Stopwatch t = new Stopwatch();
                 t.Start();
+
+                int maxRange = Int32.Parse(this.Max_range.Text.Trim());
+
                 foreach (string str in list)
                 {
-                    if (str.ToUpper().Contains(wordUpper))
+                    if (Distance_Levenstein.Distance(str, wordUpper) <= maxRange)
                     {
                         tempList.Add(str);
                     }
