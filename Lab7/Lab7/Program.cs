@@ -73,7 +73,7 @@ namespace Lab7
 
         static void Main(string[] args)
         {
-            Console.WriteLine("\n Here youe can see results for all querries with link 1:M\n");
+            Console.WriteLine("\n Here you can see results for all querries with link 1:M\n");
             Console.WriteLine("\nList of all workers and departments, sorted by department: ");
 
             var que1 = from x in workers
@@ -131,7 +131,7 @@ namespace Lab7
             foreach (var x in que5_2)
                 Console.WriteLine(x);
 
-            Console.WriteLine("\n Here youe can see results for all querries with link M:M\n");
+            Console.WriteLine("\n Here you can see results for all querries with link M:M\n");
 
             Console.WriteLine("All the departments and workers in each department: ");
             var que6_1 = from y in deps
@@ -175,9 +175,6 @@ namespace Lab7
                              N++;
                 Console.WriteLine("Number of workers " + N);
             }
-
-
-
 
             Console.WriteLine("\nPlease press any key to continue");
                 Console.Read();
