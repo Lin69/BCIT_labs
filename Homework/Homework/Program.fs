@@ -23,7 +23,7 @@ let Print(a:double, b:double, c:double):unit =
         match root with
         | NoRoots -> "No roots"
         | OneRoot(r) -> "One root" + r.ToString()
-        | TwoRoots(r1, r2) -> "Two roots " + r1.ToString() + " и " + r2.ToString()
+        | TwoRoots(r1, r2) -> "Two roots " + r1.ToString() + " and " + r2.ToString()
     printfn "%s" text
 
 let Pause() =
